@@ -4,7 +4,7 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 import yt_dlp
 
-BOT_TOKEN = 7668246463:AAGM4qxBbaSaznoXUSPKvkjQ5imUdUMckwg  # Заміни на свій токен
+BOT_TOKEN = os.getenv("BOT_TOKEN")  # Заміни на свій токен
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("👋 Надішли мені посилання на відео з YouTube, Instagram або Facebook!")
